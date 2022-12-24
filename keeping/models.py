@@ -15,14 +15,14 @@ class Category(models.Model):
 class Expenses(models.Model):
     category = models.ForeignKey(
         Category,
-        on_delete=models.CASCADE(),
+        on_delete=models.CASCADE,
         verbose_name='Категория',
         db_index=True,
         blank=False,
         null=False
     )
     description = models.CharField(max_length=500, verbose_name='Описание')
-    amount = models.DecimalField(verbose_name='Сумма')
+    amount = models.DecimalField(verbose_name='Сумма', decimal_places=2, max_digits=2)
     date = models.DateTimeField(auto_now_add=True, verbose_name='Дата')
 
     class Meta:

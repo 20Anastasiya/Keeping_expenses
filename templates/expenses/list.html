@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav>
+        <header>
+          <ul>
+            <li><a href="#" class="">Home</a></li>
+            <li><a href="#" class="">Features</a></li>
+            <li><a href="#" class="">Pricing</a></li>
+            <li><a href="#" class="">FAQs</a></li>
+            <li><a href="#" class="">About</a></li>
+            <li><button type="button" class="log-btn">Login</button></li>
+            <li><button type="button" class="sin-btn">Sign-up</button></li>
+          </ul>
+        </header>
+    </nav>
+    {% for item in object_list %}
+        <li>{{item.category}} - {{item.description}} - {{item.amount}} - {{item.date}}</li>
+    {% empty %}
+        <li>Записи отсутствуют</li>
+    {% endfor %}
+</body>
+</html>
