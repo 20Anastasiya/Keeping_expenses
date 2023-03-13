@@ -6,25 +6,41 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'maisnstyle.css' %}">
 </head>
 <body>
+    <div class="asidediv">
+        <aside>
+              <ul>
+                <li class="head-m"><a href="#" class="">Home</a></li>
+                <li class="head-m"><a href="#" class="">Add</a></li>
+                <li class="head-m"><a href="#" class="">Pricing</a></li>
+                <li class="head-m"><a href="#" class="">FAQs</a></li>
+                <li class="head-m"><a href="#" class="">About</a></li>
+                <li class="head-m"><button type="button" class="log-btn">Login</button></li>
+                <li class="head-m"><button type="button" class="sin-btn">Sign-up</button></li>
+              </ul>
+        </aside>
+    </div>
+    <br>
+    <form method="get">
+        <label for="start_date">С</label>
+        <input type="date" name="start_date">
+        <label for="end_date">по</label>
+        <input type="date" name="end_date">
+        {% csrf_token %}
+        <button type="submit">Применить</button>
+    </form>
+    <br>
     <nav>
-        <header>
-          <ul>
-            <li><a href="#" class="">Home</a></li>
-            <li><a href="#" class="">Features</a></li>
-            <li><a href="#" class="">Pricing</a></li>
-            <li><a href="#" class="">FAQs</a></li>
-            <li><a href="#" class="">About</a></li>
-            <li><button type="button" class="log-btn">Login</button></li>
-            <li><button type="button" class="sin-btn">Sign-up</button></li>
-          </ul>
-        </header>
+        <table class="listtable">
+            <tr><th class="listtable">Категория</th><th>Описание</th><th>Сумма</th><th>Дата</th></tr>
+            {% for item in expenses %}
+                <tr><td>{{item.category}}</td><td>{{item.description}}</td><td>{{item.amount}} бел.руб.</td><td>{{item.date}}</td></tr>
+            {% empty %}
+                <p>Записи отсутствуют</p>
+            {% endfor %}
+        </table>
     </nav>
-    {% for item in object_list %}
-        <li>{{item.category}} - {{item.description}} - {{item.amount}} - {{item.date}}</li>
-    {% empty %}
-        <li>Записи отсутствуют</li>
-    {% endfor %}
 </body>
 </html>

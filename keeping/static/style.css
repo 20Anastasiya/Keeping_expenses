@@ -6,7 +6,7 @@ ul {
 }
 a {text-decoration: none; /*убираем подчеркивание текста ссылок*/}
 
-li {display: inline-block;}
+.head-m {display: inline-block;}
 
 nav {
     width: 580px;
@@ -26,4 +26,18 @@ nav {
     background-color: #0d6efd;
     border-color: #0d6efd;
     hover-color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td, th {
+    border: 1px solid black; /* Параметры рамки */
+   }
+
+.listtable {
+    border-collapse: collapse;
+    border: 1px solid black;
 }

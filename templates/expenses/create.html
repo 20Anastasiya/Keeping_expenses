@@ -1,0 +1,16 @@
+{% extends 'expenses/basic.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}Создание записи{% endblock %}
+</head>
+{% block body %}
+    <form method="post" >
+    {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Создать"/>
+    </form>
+{% endblock %}
+</html>

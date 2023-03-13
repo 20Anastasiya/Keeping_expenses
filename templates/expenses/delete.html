@@ -1,0 +1,24 @@
+<!-- delete.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Удаление объекта</title>
+  </head>
+  <body>
+    <h1>Удаление записи</h1>
+    <div>
+      <a href="{% url 'keeping:list' %}">Главная</a>
+    </div>
+    <div>
+      <p>Категория: {{ expenses.category }}</p>
+      <p>Описание: {{ expenses.description }}</p>
+      <p>Дата: {{ expenses.date }}</p>
+      <p>Сумма: {{ expenses.amount }}</p>
+      <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Удалить">
+      </form>
+    </div>
+  </body>
+</html>

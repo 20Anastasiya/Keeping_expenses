@@ -1,0 +1,42 @@
+aside {
+    float: top;
+    background-color: #5b80b2;
+    width: 100%;
+    padding: 1%;
+    color: #1b1b1b;
+    border-bottom: #1b1b1b solid 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+a {
+    color: #1b1b1b;
+}
+
+header {
+    align-items: center;
+
+}
+
+ul {
+    align-items: center;
+}
+
+li {
+    margin: 10px;
+}
+
+form {
+    display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.asidediv {
+    display: flex!important;
+}
+
+label {
+    margin: 0px 10px 0px 10px;
+}
