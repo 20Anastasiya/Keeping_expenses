@@ -9,7 +9,7 @@ a {text-decoration: none; /*убираем подчеркивание текст
 .head-m {display: inline-block;}
 
 nav {
-    width: 580px;
+    width: 1000px;
     position: relative;
     margin: 0 auto;
 }

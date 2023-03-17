@@ -16,10 +16,10 @@ class ListExpense(ListView):
 
     def get_context_data(self, *args, **kwargs):
         context_data = super().get_context_data(*args, **kwargs)
-        date = datetime.now()
-        start_cont = datetime(date.year, date.month-1, 1, 0, 0, 0, 0)
-        weekday, end_day = monthrange(date.year, date.month-1)
-        end_cont = datetime(date.year, date.month-1, end_day, 0, 0, 0, 0)
+        # date = datetime.now()
+        # start_cont = datetime(date.year, date.month-1, 1, 0, 0, 0, 0)
+        # weekday, end_day = monthrange(date.year, date.month-1)
+        # end_cont = datetime(date.year, date.month-1, end_day, 0, 0, 0, 0)
         return context_data
 
     def get_queryset(self):

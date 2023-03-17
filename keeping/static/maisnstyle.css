@@ -40,3 +40,7 @@ justify-content: center;
 label {
     margin: 0px 10px 0px 10px;
 }
+
+.text-bg-dark{
+    background-color: tan;
+}
